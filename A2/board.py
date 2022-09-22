@@ -22,7 +22,6 @@ class Board:
         # It should return a meaningful score of the game
         # This should probably have something to do with 
         # the number of apples eaten or similar
-        # len(default_snake_start_body)
         current_length = len(self.snake) - self.start_length
         return current_length
     
@@ -49,11 +48,11 @@ class Board:
 
         # If the desired direction isn't a value at all, don't update anything
         # In that case the snake just continues it current path
-        #print(wanted_direction)
-        print(self.snake.last_direction)
-        if wanted_direction(0) = self.snake.last_direction(-0)
-            return False
-            print(False)
+        if wanted_direction is not None:
+            if wanted_direction[0] == self.snake.last_direction[0]*-1 or wanted_direction[1] == self.snake.last_direction[1]*-1:
+                return
+        if not wanted_direction:
+            return
         # Set the new direction of the snake according input from user/A.I
         self.snake.last_direction = wanted_direction
 
